@@ -3,12 +3,13 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Introduction from "../components/introduction";
 
 const IndexPage = () => (
 	<Layout>
 		<Seo title="Home" />
-		{/* <Introduction/>
-    <About/>
+		<Introduction />
+		{/*
     <Projects/>
     <Contact/>
     <Footer/> */}
