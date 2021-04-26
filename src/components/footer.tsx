@@ -5,7 +5,7 @@ interface FooterProps {
 }
 
 const Footer = ({ author }: FooterProps) => (
-	<footer className="mt-8">
+	<footer className="prose mt-8">
 		© {new Date().getFullYear()},{` `}
 		{author}
 	</footer>

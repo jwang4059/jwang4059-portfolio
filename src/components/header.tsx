@@ -2,9 +2,9 @@ import React from "react";
 import { MenuIcon } from "@heroicons/react/outline";
 
 const Header = () => (
-	<header className="mb-6 bg-gray-900">
+	<header className="bg-gray-100">
 		<div className="p-4">
-			<MenuIcon className="h-8 w-8 text-blue-700" />
+			<MenuIcon className="h-8 w-8 text-blue-400" />
 		</div>
 	</header>
 );
