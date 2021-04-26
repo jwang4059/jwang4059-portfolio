@@ -33,17 +33,19 @@ const Project = ({ data, image }: ProjectProps) => {
 	}
 
 	return (
-		<div className="prose shadow-lg p-2 m-2">
-			{renderedImage}
-			<h2 className="prose-lg">{data.name}</h2>
-			<p>{data.description}</p>
-			<p>{data.info}</p>
-			<a href={data.repo}>
-				<button>Source Code</button>
-			</a>
-			<a href={data.url}>
-				<button>Live Demo</button>
-			</a>
+		<div className="prose shadow-lg p-4 mx-4 my-8 bg-blue-200">
+			<div>{renderedImage}</div>
+			<div className="text-left">
+				<h2 className="prose-lg">{data.name}</h2>
+				<p>{data.description}</p>
+				<p>{data.info}</p>
+				<a href={data.repo}>
+					<button>Source Code</button>
+				</a>
+				<a href={data.url}>
+					<button>Live Demo</button>
+				</a>
+			</div>
 		</div>
 	);
 };

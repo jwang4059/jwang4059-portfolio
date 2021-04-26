@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Introduction = () => {
 	return (
 		<article className="prose p-4">
-			<h1 className="prose-lg">
+			<h1>
 				Hi, I'm <span>John</span>.
 			</h1>
 			<p>
@@ -13,8 +13,8 @@ const Introduction = () => {
 				scalable code.
 			</p>
 			<StaticImage
-				className="m-4"
-				src="../images/profile/profile.jpg"
+				className="m-4 rounded-md shadow-md"
+				src="../images/profile/profile-original.jpg"
 				width={300}
 				quality={95}
 				formats={["auto", "webp", "avif"]}

@@ -27,7 +27,6 @@ const Layout = ({ children }: LayoutProps) => {
 		}
 	`);
 
-	const siteTitle: string = data.site.siteMetadata?.title || `Title`;
 	const siteAuthor: string = data.site.siteMetadata?.author || `Author`;
 
 	return (
