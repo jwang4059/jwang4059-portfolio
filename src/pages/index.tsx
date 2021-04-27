@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
 import ProjectContainer from "../components/projectContainer";
+import Contact from "../components/contact";
 import { projectsData } from "../mock/data";
 
 interface IndexQueryProps {
@@ -23,9 +24,7 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = (props) => {
 			<Seo title="Home" />
 			<Hero />
 			<ProjectContainer projectData={projectsData} projectImages={images} />
-			{/*
-			<Contact/>
-    	*/}
+			<Contact />
 		</Layout>
 	);
 };

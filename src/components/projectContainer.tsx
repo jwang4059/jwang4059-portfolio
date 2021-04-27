@@ -20,7 +20,7 @@ const ProjectContainer = ({
 	));
 
 	return (
-		<section>
+		<section id="projects">
 			<h1 className="text-4xl font-bold">Projects</h1>
 			{renderedProjects}
 		</section>

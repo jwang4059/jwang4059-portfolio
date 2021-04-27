@@ -6,8 +6,26 @@ interface FooterProps {
 
 const Footer = ({ author }: FooterProps) => (
 	<footer className="text-base my-4">
-		© {new Date().getFullYear()},{` `}
-		{author}
+		<div className="flex justify-center my-2">
+			<a
+				href="https://www.linkedin.com/in/jwang4059/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<i className={`devicon-linkedin-plain text-4xl p-2 m-2`} />
+			</a>
+			<a
+				href="https://www.linkedin.com/in/jwang4059/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<i className={`devicon-github-original text-4xl p-2 m-2`} />
+			</a>
+		</div>
+		<div className="my-2">
+			© {new Date().getFullYear()},{` `}
+			{author}
+		</div>
 	</footer>
 );
 

@@ -1,17 +1,15 @@
 import React from "react";
 
 interface IconProps {
-	logo: {
-		name: string;
-		src: string;
-	};
+	logo: string;
+	children: string;
 }
 
-const Icon = ({ logo }: IconProps) => {
+const Icon = ({ logo, children }: IconProps) => {
 	return (
 		<div className="flex flex-col justify-center items-center w-20 h-20 p-1 m-1">
-			<i className={`${logo.src} text-4xl`} />
-			<span className="text-xs">{logo.name}</span>
+			<i className={`${logo} text-4xl`} />
+			<span className="text-xs">{children}</span>
 		</div>
 	);
 };

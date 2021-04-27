@@ -40,7 +40,7 @@ const Project = ({ data, image }: ProjectProps) => {
 	}
 
 	return (
-		<div className="shadow-lg p-4 mx-4 my-8 bg-blue-200">
+		<div className="p-4 mx-4 my-8 bg-blue-200">
 			{renderedImage}
 			<div className="text-left">
 				<h2 className="text-2xl font-bold my-2">{data.name}</h2>
@@ -50,7 +50,13 @@ const Project = ({ data, image }: ProjectProps) => {
 				</a>
 				<p className="text-base my-4">{data.info}</p>
 				<div className="flex flex-row flex-wrap justify-center items-center my-2">
-					{data.stack ? data.stack.map((logo) => <Icon logo={logo} />) : null}
+					{data.stack
+						? data.stack.map((logo) => (
+								<Icon key={logo.src} logo={logo.src}>
+									{logo.name}
+								</Icon>
+						  ))
+						: null}
 				</div>
 				{data?.url ? (
 					<Button
