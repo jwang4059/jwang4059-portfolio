@@ -19,7 +19,12 @@ const ProjectContainer = ({
 		<Project key={data.repo} data={data} image={getFileNode(data)} />
 	));
 
-	return <section>{renderedProjects}</section>;
+	return (
+		<section>
+			<h1 className="text-4xl font-bold">Projects</h1>
+			{renderedProjects}
+		</section>
+	);
 };
 
 export default ProjectContainer;

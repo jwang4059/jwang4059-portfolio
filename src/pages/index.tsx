@@ -4,7 +4,7 @@ import { FileNode } from "gatsby-plugin-image/dist/src/components/hooks";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Introduction from "../components/introduction";
+import Hero from "../components/hero";
 import ProjectContainer from "../components/projectContainer";
 import { projectsData } from "../mock/data";
 
@@ -21,7 +21,7 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = (props) => {
 	return (
 		<Layout>
 			<Seo title="Home" />
-			<Introduction />
+			<Hero />
 			<ProjectContainer projectData={projectsData} projectImages={images} />
 			{/*
 			<Contact/>
@@ -39,11 +39,7 @@ export const IndexQuery = graphql`
 					base
 					childImageSharp {
 						id
-						gatsbyImageData(
-							width: 300
-							quality: 95
-							formats: [AUTO, WEBP, AVIF]
-						)
+						gatsbyImageData(quality: 95, formats: [AUTO, WEBP, AVIF])
 					}
 				}
 			}
