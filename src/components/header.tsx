@@ -5,27 +5,37 @@ import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { MenuIcon } from "@heroicons/react/outline";
 
 interface NavLinkProps {
+	classes: string;
 	children: ReactNode;
 }
 
-const NavLink = ({ children }: NavLinkProps) => (
-	<li className="p-4 hover:bg-blue-600 hover:text-white">{children}</li>
+const NavLink = ({ classes, children }: NavLinkProps) => (
+	<li className={`p-4 text-blue-600 ${classes}`}>{children}</li>
 );
 
-const MobileMenu = () => {
+interface NavBarProps {
+	variant?: "mobile" | "desktop";
+}
+
+const NavBar = ({ variant = "desktop" }: NavBarProps) => {
+	const classes: string =
+		variant === "desktop"
+			? "inline hover:underline"
+			: "bg-gray-200 hover:bg-blue-600 hover:text-white";
+
 	return (
-		<ul className="text-left text-blue-600 bg-gray-200">
+		<ul className="text-left">
 			<Link to="/">
-				<NavLink>Home</NavLink>
+				<NavLink classes={classes}>Home</NavLink>
 			</Link>
 			<Link to="/about">
-				<NavLink>About</NavLink>
+				<NavLink classes={classes}>About</NavLink>
 			</Link>
 			<Link to="/contact">
-				<NavLink>Contact</NavLink>
+				<NavLink classes={classes}>Contact</NavLink>
 			</Link>
 			<a href="/resume" target="_blank" rel="noreferrer">
-				<NavLink>Resume</NavLink>
+				<NavLink classes={classes}>Resume</NavLink>
 			</a>
 		</ul>
 	);
@@ -35,19 +45,25 @@ const Header = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className="self-stretch">
-			<nav className="fixed min-w-full  bg-gray-100 z-10">
+		<header>
+			<nav className="fixed min-w-full bg-gray-100 z-10">
 				<div className="flex flex-row items-center p-2 ">
-					<div className="flex-grow text-left p-2 text-blue-600">
+					<Link to="/" className="flex-grow text-left p-2 text-blue-600">
 						<FontAwesomeIcon icon={faCloud} /> John Wang
-					</div>
-					<div className="text-right p-2">
-						<button className="h-8 w-8" onClick={() => setOpen(!open)}>
+					</Link>
+					<div className="p-2">
+						<button
+							className="h-8 w-8 md:hidden"
+							onClick={() => setOpen(!open)}
+						>
 							<MenuIcon />
 						</button>
+						<div className="hidden md:flex">
+							<NavBar />
+						</div>
 					</div>
 				</div>
-				{open && <MobileMenu />}
+				{open && <NavBar variant="mobile" />}
 			</nav>
 		</header>
 	);

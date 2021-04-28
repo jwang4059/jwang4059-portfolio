@@ -40,10 +40,12 @@ const Project = ({ data, image }: ProjectProps) => {
 	}
 
 	return (
-		<div className="p-4 mx-4 my-8 bg-blue-200">
-			{renderedImage}
-			<div className="text-left">
-				<h2 className="text-2xl font-bold my-2">{data.name}</h2>
+		<section className="p-4 mx-4 my-8 bg-blue-200 flex flex-col items-center lg:flex-row-reverse lg:mx-12 lg:p-8">
+			<div className="max-w-2xl lg:max-w-lg lg:flex-shrink-0">
+				{renderedImage}
+			</div>
+			<div className="max-w-4xl text-left lg:mr-12">
+				<h3 className="text-2xl font-bold my-2">{data.name}</h3>
 				<p className="text-base italic my-1">{data.description}</p>
 				<a className="text-base text-blue-600 my-1" href={data.repo}>
 					Source Code
@@ -67,7 +69,7 @@ const Project = ({ data, image }: ProjectProps) => {
 					</Button>
 				) : null}
 			</div>
-		</div>
+		</section>
 	);
 };
 

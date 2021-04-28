@@ -5,7 +5,7 @@ interface FooterProps {
 }
 
 const Footer = ({ author }: FooterProps) => (
-	<footer className="text-base my-4">
+	<footer className="self-center text-base my-4">
 		<div className="flex justify-center my-2">
 			<a
 				href="https://www.linkedin.com/in/jwang4059/"

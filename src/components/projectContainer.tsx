@@ -20,10 +20,10 @@ const ProjectContainer = ({
 	));
 
 	return (
-		<section id="projects">
-			<h1 className="text-4xl font-bold">Projects</h1>
+		<article id="projects" className="self-stretch pt-24 pb-12">
+			<h2 className="text-4xl font-bold">Projects</h2>
 			{renderedProjects}
-		</section>
+		</article>
 	);
 };
 
