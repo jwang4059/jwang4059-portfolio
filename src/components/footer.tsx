@@ -14,11 +14,7 @@ const Footer = ({ author }: FooterProps) => (
 			>
 				<i className={`devicon-linkedin-plain text-4xl p-2 m-2`} />
 			</a>
-			<a
-				href="https://www.linkedin.com/in/jwang4059/"
-				target="_blank"
-				rel="noreferrer"
-			>
+			<a href="https://github.com/jwang4059" target="_blank" rel="noreferrer">
 				<i className={`devicon-github-original text-4xl p-2 m-2`} />
 			</a>
 		</div>

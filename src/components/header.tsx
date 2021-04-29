@@ -34,7 +34,11 @@ const NavBar = ({ variant = "desktop" }: NavBarProps) => {
 			<Link to="/contact">
 				<NavLink classes={classes}>Contact</NavLink>
 			</Link>
-			<a href="/resume" target="_blank" rel="noreferrer">
+			<a
+				href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing"
+				target="_blank"
+				rel="noreferrer"
+			>
 				<NavLink classes={classes}>Resume</NavLink>
 			</a>
 		</ul>

@@ -33,7 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
 		<>
 			<div className="flex flex-col text-center min-h-screen bg-gray-100">
 				<Header />
-				<main className="flex-grow flex flex-col items-center mt-12">
+				<main className="flex-grow flex flex-col items-center mt-12 p-8">
 					{children}
 				</main>
 				<Footer author={siteAuthor} />

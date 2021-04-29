@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
 	return (
-		<div className="flex flex-col py-8 w-3/4">
+		<div className="flex flex-col w-3/4 max-w-2xl">
 			<h1 className="text-2xl font-bold">Let's Work Together</h1>
 			<p className="my-4">
 				Thank you for visiting and scrolling through my portfolio. If you want
@@ -38,7 +38,7 @@ const ContactForm = () => {
 					required
 				/>
 				<button
-					className="self-center block bg-blue-600 text-white font-bold  w-24 px-4 py-2 my-8"
+					className="self-center block bg-blue-600 text-white font-bold w-24 px-4 py-2 my-8"
 					type="submit"
 				>
 					Submit
