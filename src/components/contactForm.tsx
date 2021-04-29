@@ -11,9 +11,13 @@ const ContactForm = () => {
 			</p>
 			<form
 				className="flex flex-col items-stretch"
-				action="POST"
+				name="contact"
+				method="POST"
 				data-netlify="true"
+				data-netlify-honeypot="bot-field"
+				data-netlify-recaptcha="true"
 			>
+				<input type="hidden" name="form-name" value="contact" />
 				<input
 					className="p-4 my-2"
 					id="name"
@@ -37,6 +41,7 @@ const ContactForm = () => {
 					placeholder="Your Message"
 					required
 				/>
+				<div data-netlify-recaptcha="true"></div>
 				<button
 					className="self-center block bg-blue-600 text-white font-bold w-24 px-4 py-2 my-8"
 					type="submit"

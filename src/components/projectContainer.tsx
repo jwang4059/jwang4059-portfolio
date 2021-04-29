@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import Project, { Data } from "./project";
 import { FileNode } from "gatsby-plugin-image/dist/src/components/hooks";
+import Project, { Data } from "./project";
 
 interface ProjectContainerProps {
 	projectData: Array<Data>;
