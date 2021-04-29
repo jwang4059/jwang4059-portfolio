@@ -81,6 +81,11 @@ function Seo({ description = "", lang = "en", meta = [], title }: SEOProps) {
 					href:
 						"https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css",
 				},
+				{
+					rel: "stylesheet",
+					href:
+						"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+				},
 			]}
 		/>
 	);

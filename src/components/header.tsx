@@ -1,7 +1,5 @@
 import React, { ReactNode, useState } from "react";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { MenuIcon } from "@heroicons/react/outline";
 
 interface NavLinkProps {
@@ -53,7 +51,7 @@ const Header = () => {
 			<nav className="fixed min-w-full bg-gray-100 z-10">
 				<div className="flex flex-row items-center p-2 ">
 					<Link to="/" className="flex-grow text-left p-2 text-blue-600">
-						<FontAwesomeIcon icon={faCloud} /> John Wang
+						<i className="fa fa-cloud" /> John Wang{" "}
 					</Link>
 					<div className="p-2">
 						<button
