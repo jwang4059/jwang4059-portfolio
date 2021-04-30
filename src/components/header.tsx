@@ -1,86 +1,63 @@
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
-import { motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import { MenuToggle } from "./menuToggle";
+import MobileMenu from "./mobileMenu";
 
-interface NavLinkProps {
-	classes: string;
-	component: "link" | "a";
-	href: string;
-	children: ReactNode;
-}
-
-const NavLink = ({ classes, component, href, children }: NavLinkProps) => {
-	const content = (
-		<li className={`p-4 text-blue-600 ${classes}`}>{children}</li>
-	);
-	const renderedLink =
-		component === "link" ? (
-			<Link to={href}>{content}</Link>
-		) : (
-			<a href={href} target="_blank" rel="noreferrer">
-				{content}
-			</a>
-		);
-
-	return renderedLink;
-};
-
-interface NavBarProps {
-	variant?: "mobile" | "desktop";
-}
-
-const NavBar = ({ variant = "desktop" }: NavBarProps) => {
-	const classes: string =
-		variant === "desktop"
-			? "inline hover:underline"
-			: "bg-gray-200 hover:bg-blue-600 hover:text-white";
-
+const NavLink = ({ children }) => {
 	return (
-		<ul className="text-left">
-			<NavLink classes={classes} component="link" href="/">
-				Home
-			</NavLink>
-			<NavLink classes={classes} component="link" href="/about">
-				About
-			</NavLink>
-			<NavLink classes={classes} component="link" href="/contact">
-				Contact
-			</NavLink>
-			<NavLink
-				classes={classes}
-				component="a"
-				href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing"
-			>
-				Resume
-			</NavLink>
-		</ul>
+		<li className={`inline p-4 text-blue-600 hover:underline`}>{children}</li>
 	);
 };
+
+const NavBar = () => (
+	<nav>
+		<ul>
+			<Link to="/">
+				<NavLink>Home</NavLink>
+			</Link>
+			<Link to="/about">
+				<NavLink>About</NavLink>
+			</Link>
+			<Link to="/contact">
+				<NavLink>Contact</NavLink>
+			</Link>
+			<a
+				href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<NavLink>Resume</NavLink>
+			</a>
+		</ul>
+	</nav>
+);
 
 const Header = () => {
-	const [isOpen, toggleOpen] = useCycle(false, true);
+	const [open, setOpen] = useState(false);
 
 	return (
-		<header>
-			<nav className="fixed min-w-full bg-gray-100 z-10">
+		<header className="fixed min-w-full z-10 text-left">
+			<div className=" bg-gray-100">
 				<div className="flex flex-row items-center p-2 ">
-					<Link to="/" className="flex-grow text-left p-2 text-blue-600">
-						<i className="fa fa-cloud" /> John Wang
-					</Link>
+					<div className="flex-grow text-left p-2 text-blue-600">
+						<Link to="/">
+							<i className="fa fa-cloud" /> John Wang
+						</Link>
+					</div>
 					<div className="hidden md:flex">
 						<NavBar />
 					</div>
 					<motion.div
-						className=" md:hidden"
+						className="p-2 md:hidden"
 						initial={false}
-						animate={isOpen ? "open" : "closed"}
+						animate={open ? "open" : "closed"}
 					>
-						<MenuToggle toggle={() => toggleOpen()} />
+						<MenuToggle toggle={() => setOpen(!open)} />
 					</motion.div>
 				</div>
-				{isOpen && <NavBar variant="mobile" />}
-			</nav>
+			</div>
+			{<MobileMenu open={open} />}
 		</header>
 	);
 };
