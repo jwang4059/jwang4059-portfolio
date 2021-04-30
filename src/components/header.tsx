@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import { Link } from "gatsby";
-import { MenuIcon } from "@heroicons/react/outline";
+import { motion } from "framer-motion";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 interface NavLinkProps {
 	classes: string;
@@ -54,12 +55,14 @@ const Header = () => {
 						<i className="fa fa-cloud" /> John Wang{" "}
 					</Link>
 					<div className="p-2">
-						<button
+						<motion.button
 							className="h-8 w-8 md:hidden"
 							onClick={() => setOpen(!open)}
+							whileHover={{ scale: 1.2 }}
+							transition={{ type: "spring", duration: 1, stiffness: 200 }}
 						>
-							<MenuIcon />
-						</button>
+							{!open ? <MenuIcon /> : <XIcon />}
+						</motion.button>
 						<div className="hidden md:flex">
 							<NavBar />
 						</div>

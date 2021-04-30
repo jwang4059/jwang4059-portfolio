@@ -13,7 +13,7 @@ const Hero = () => {
 						I'm passionate about building web applicaitions and writing clean
 						and scalable code.
 					</p>
-					<a className="inline-block" href="#projects">
+					<a className="self-start" href="#projects">
 						<div className="flex items-center text-lg text-blue-600 my-4">
 							<span className="mr-2">Scroll to see projects</span>
 							<ArrowNarrowDownIcon className="inline h-5 w-5" />
