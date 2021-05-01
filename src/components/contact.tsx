@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
 const Contact = () => {
 	return (
-		<article>
+		<motion.article
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
+		>
 			<section className="max-w-xl">
 				<div className="my-4">
 					<h2 className="text-xl font-bold m-4">Let's Connect</h2>
@@ -13,12 +18,16 @@ const Contact = () => {
 					</p>
 				</div>
 				<Link to="/contact">
-					<div className="bg-blue-600 text-white rounded-md p-2 m-4">
-						<button>Contact Me</button>
-					</div>
+					<motion.button
+						className="bg-blue-600 text-white px-4 py-2 m-4"
+						whileHover={{ scale: 1.2 }}
+						transition={{ duration: 0.4 }}
+					>
+						Contact Me
+					</motion.button>
 				</Link>
 			</section>
-		</article>
+		</motion.article>
 	);
 };
 

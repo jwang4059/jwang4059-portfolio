@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
 	return (
@@ -40,12 +41,14 @@ const ContactForm = () => {
 					placeholder="Your Message"
 					required
 				/>
-				<button
+				<motion.button
 					className="self-center block bg-blue-600 text-white font-bold w-24 px-4 py-2 my-8"
 					type="submit"
+					whileHover={{ scale: 1.2 }}
+					transition={{ duration: 0.4 }}
 				>
-					Submit
-				</button>
+					Submit{" "}
+				</motion.button>
 			</form>
 		</div>
 	);

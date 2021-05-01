@@ -1,15 +1,15 @@
-import React, { ReactNode } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
-interface ButtonProps {
-	classes?: string;
-	href?: string;
-	children: ReactNode;
-}
-
-const Button = ({ classes = "", href = "#", children }: ButtonProps) => {
+const Button = ({ classes = "", href = "#", children }) => {
 	return (
 		<a href={href} target="_blank" rel="noreferrer">
-			<button className={classes}>{children}</button>
+			<motion.button
+				className={classes}
+				whileHover={{ color: "white", backgroundColor: "#2563EB" }}
+			>
+				{children}
+			</motion.button>
 		</a>
 	);
 };

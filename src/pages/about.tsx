@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
@@ -7,7 +8,11 @@ const About = () => {
 	return (
 		<Layout>
 			<Seo title="About" />
-			<article>
+			<motion.article
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+			>
 				<section className="flex flex-col items-center max-w-6xl lg:flex-row">
 					<StaticImage
 						className="rounded-md shadow-md md:flex-shrink-0"
@@ -33,10 +38,10 @@ const About = () => {
 							spent years learning general computer science knowledge such as
 							data structures, algorithms, and software design. I’ve joined
 							clubs for different things like volunteering, dragon boat, and
-							video game design. I’ve continuously tried to figure out who and
-							what I wanted to be, and it wasn’t until my last year in college
-							that I realized I was interested in web development and wanted to
-							pursue a career in this industry.
+							video game design. I’ve continuously tried to figure out who I was
+							and what I wanted to be, and it wasn’t until my last year in
+							college that I realized I was interested in web development and
+							wanted to pursue a career in this industry.
 						</p>
 						<p className="my-4">
 							After I graduated in Summer of 2020, I decided it was time for me
@@ -65,14 +70,20 @@ const About = () => {
 							When I’m not working on personal projects, you can find me working
 							out, learning Japanese, and spending time with friends and family.
 						</p>
-						<a href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing">
-							<button className="text-blue-600 border-blue-600 border-2 px-4 py-2">
-								View My Resume
-							</button>
-						</a>
 					</div>
 				</section>
-			</article>
+				<section className="mt-16">
+					<a href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing">
+						<motion.button
+							className="bg-blue-600 text-white px-4 py-2"
+							whileHover={{ scale: 1.2 }}
+							transition={{ duration: 0.4 }}
+						>
+							View My Resume
+						</motion.button>
+					</a>
+				</section>
+			</motion.article>
 		</Layout>
 	);
 };

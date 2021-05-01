@@ -4,9 +4,15 @@ import { motion } from "framer-motion";
 
 const MenuVariants = {
 	closed: {
-		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+		display: "none",
+		transition: {
+			when: "afterChildren",
+			staggerChildren: 0.05,
+			staggerDirection: -1,
+		},
 	},
 	open: {
+		display: "block",
 		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
 	},
 };
