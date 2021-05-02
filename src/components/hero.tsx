@@ -15,10 +15,10 @@ const Hero = () => {
 				<div className="flex flex-col justify-center text-left mb-4 md:mr-12">
 					<h1 className="text-4xl font-bold">Hi, I'm John.</h1>
 					<p className="text-xl my-4">
-						I'm a web developer and full stack engineer based in the Bay Area.
-						I'm passionate about learning new web development technologies and
-						building practical web applications that can make an impact on the
-						lives of others.
+						I'm a full stack developer based in the Bay Area. I'm passionate
+						about learning new web development technologies and building
+						practical web applications that can make an impact on the lives of
+						others.
 					</p>
 					<a className="self-start" href="#projects">
 						<div className="flex items-center text-lg text-blue-600 my-4">

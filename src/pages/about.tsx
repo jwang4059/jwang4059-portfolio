@@ -53,7 +53,7 @@ const About = () => {
 							development. You can literally build anything with the endless
 							number of resources and APIs out there. What was once an interest
 							has developed into a passion for web development and my desire to
-							work as a web developer or full stack engineer.
+							work as a full stack developer.
 						</p>
 						<p className="my-4">
 							Now, I’m passionate about building responsive, full stack web
