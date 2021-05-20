@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
-const About = () => {
+const AboutPage = () => {
 	return (
 		<Layout>
 			<Seo title="About" />
@@ -88,4 +88,4 @@ const About = () => {
 	);
 };
 
-export default About;
+export default AboutPage;

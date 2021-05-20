@@ -15,7 +15,7 @@ interface IndexQueryProps {
 	};
 }
 
-const IndexPage: React.FC<PageProps<IndexQueryProps>> = (props) => {
+const IndexPage = (props: PageProps<IndexQueryProps>) => {
 	const files = props.data.allFile.edges;
 	const images = files.map(({ node }) => node);
 

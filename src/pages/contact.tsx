@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import ContactForm from "../components/contactForm";
 
-const Contact = () => {
+const ContactPage = () => {
 	return (
 		<Layout>
 			<Seo title="Contact" />
@@ -12,4 +12,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default ContactPage;

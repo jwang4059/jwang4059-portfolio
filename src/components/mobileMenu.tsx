@@ -62,7 +62,7 @@ const mobileMenu = ({ open }) => {
 					<MenuItem>Contact</MenuItem>
 				</Link>
 				<a
-					href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing"
+					href="https://drive.google.com/file/d/1SoI-L6zyGqxTfnlty90z3C6lxasXuClz/view?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 				>
