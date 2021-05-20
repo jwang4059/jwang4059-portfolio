@@ -3,35 +3,34 @@ import { Link } from "gatsby";
 import { motion } from "framer-motion";
 import { MenuToggle } from "./menuToggle";
 import MobileMenu from "./mobileMenu";
+import { resume } from "../mock/data";
 
-const NavLink = ({ children }) => {
+const NavLink: React.FC = ({ children }) => {
 	return (
 		<li className={`inline p-4 text-blue-600 hover:underline`}>{children}</li>
 	);
 };
 
-const NavBar = () => (
-	<nav>
-		<ul>
-			<Link to="/">
-				<NavLink>Home</NavLink>
-			</Link>
-			<Link to="/about">
-				<NavLink>About</NavLink>
-			</Link>
-			<Link to="/contact">
-				<NavLink>Contact</NavLink>
-			</Link>
-			<a
-				href="https://drive.google.com/file/d/1SoI-L6zyGqxTfnlty90z3C6lxasXuClz/view?usp=sharing"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<NavLink>Resume</NavLink>
-			</a>
-		</ul>
-	</nav>
-);
+const NavBar = () => {
+	return (
+		<nav>
+			<ul>
+				<Link to="/">
+					<NavLink>Home</NavLink>
+				</Link>
+				<Link to="/about">
+					<NavLink>About</NavLink>
+				</Link>
+				<Link to="/contact">
+					<NavLink>Contact</NavLink>
+				</Link>
+				<a href={resume} target="_blank" rel="noreferrer">
+					<NavLink>Resume</NavLink>
+				</a>
+			</ul>
+		</nav>
+	);
+};
 
 const Header = () => {
 	const [open, setOpen] = useState(false);

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
+import { resume } from "../mock/data";
 
 const MenuVariants = {
 	closed: {
@@ -34,7 +35,7 @@ const MenuItemVariants = {
 	},
 };
 
-const MenuItem = ({ children }) => (
+const MenuItem: React.FC = ({ children }) => (
 	<motion.li
 		className="p-4 bg-gray-100 hover:bg-blue-600 hover:text-white"
 		variants={MenuItemVariants}
@@ -43,7 +44,7 @@ const MenuItem = ({ children }) => (
 	</motion.li>
 );
 
-const mobileMenu = ({ open }) => {
+const MobileMenu: React.FC<{ open: Boolean }> = ({ open }) => {
 	return (
 		<nav>
 			<motion.ul
@@ -61,11 +62,7 @@ const mobileMenu = ({ open }) => {
 				<Link to="/contact">
 					<MenuItem>Contact</MenuItem>
 				</Link>
-				<a
-					href="https://drive.google.com/file/d/1SoI-L6zyGqxTfnlty90z3C6lxasXuClz/view?usp=sharing"
-					target="_blank"
-					rel="noreferrer"
-				>
+				<a href={resume} target="_blank" rel="noreferrer">
 					<MenuItem>Resume</MenuItem>
 				</a>
 			</motion.ul>
@@ -73,4 +70,4 @@ const mobileMenu = ({ open }) => {
 	);
 };
 
-export default mobileMenu;
+export default MobileMenu;

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Path = (props) => (
+const Path: React.FC<any> = (props) => (
 	<motion.path
 		fill="transparent"
 		strokeWidth="3"
@@ -11,7 +11,7 @@ const Path = (props) => (
 	/>
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
 	<div className="flex justify-center items-center h-8 w-8 p-2">
 		<button onClick={toggle}>
 			<svg width="23" height="23" viewBox="0 0 23 23">

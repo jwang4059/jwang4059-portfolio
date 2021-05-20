@@ -5,7 +5,7 @@ interface IconProps {
 	children: string;
 }
 
-const Icon = ({ logo, children }: IconProps) => {
+const Icon: React.FC<IconProps> = ({ logo, children }) => {
 	return (
 		<div className="flex flex-col justify-center items-center w-20 h-20 p-1 m-1">
 			<i className={`${logo} text-4xl`} />

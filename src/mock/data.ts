@@ -87,3 +87,6 @@ export const projectsData = [
 		url: "",
 	},
 ];
+
+export const resume =
+	"https://drive.google.com/file/d/1SoI-L6zyGqxTfnlty90z3C6lxasXuClz/view?usp=sharing";

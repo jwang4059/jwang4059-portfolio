@@ -1,10 +1,6 @@
 import React from "react";
 
-interface FooterProps {
-	author: string;
-}
-
-const Footer = ({ author }: FooterProps) => (
+const Footer: React.FC<{ author: string }> = ({ author }) => (
 	<footer className="self-center text-base my-4">
 		<div className="flex justify-center my-2">
 			<a

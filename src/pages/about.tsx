@@ -1,8 +1,9 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import { resume } from "../mock/data";
 
 const AboutPage = () => {
 	return (
@@ -73,7 +74,7 @@ const AboutPage = () => {
 					</div>
 				</section>
 				<section className="mt-16">
-					<a href="https://drive.google.com/file/d/1soK-tqpmOFN5UMyeBQ_zVF6Yymgk7uCO/view?usp=sharing">
+					<a href={resume} target="_blank" rel="noreferrer">
 						<motion.button
 							className="bg-blue-600 text-white px-4 py-2"
 							whileHover={{ scale: 1.2 }}

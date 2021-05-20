@@ -23,7 +23,7 @@ interface ProjectProps {
 	image: FileNode | undefined;
 }
 
-const Project = ({ data, image }: ProjectProps) => {
+const Project: React.FC<ProjectProps> = ({ data, image }) => {
 	let renderedImage: ReactNode | null = null;
 
 	if (image) {

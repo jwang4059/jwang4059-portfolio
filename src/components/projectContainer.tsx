@@ -7,10 +7,10 @@ interface ProjectContainerProps {
 	projectImages: Array<FileNode>;
 }
 
-const ProjectContainer = ({
+const ProjectContainer: React.FC<ProjectContainerProps> = ({
 	projectData,
 	projectImages,
-}: ProjectContainerProps) => {
+}) => {
 	const getFileNode = (data: Data) => {
 		return projectImages.find((node) => node.base === data.image.src);
 	};

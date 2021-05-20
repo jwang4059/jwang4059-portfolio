@@ -1,7 +1,17 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-const Button = ({ classes = "", href = "#", children }) => {
+interface ButtonProps {
+	classes?: string;
+	href?: string;
+	children: ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({
+	classes = "",
+	href = "#",
+	children,
+}) => {
 	return (
 		<a href={href} target="_blank" rel="noreferrer">
 			<motion.button
