@@ -89,4 +89,4 @@ export const projectsData = [
 ];
 
 export const resume =
-	"https://drive.google.com/file/d/1SoI-L6zyGqxTfnlty90z3C6lxasXuClz/view?usp=sharing";
+	"https://drive.google.com/file/d/1Xazd9-VzG59hU122TsyogTdhOnvR7FXV/view?usp=sharing";
