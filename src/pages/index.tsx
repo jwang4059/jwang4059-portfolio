@@ -7,7 +7,7 @@ import Seo from "../components/seo";
 import Hero from "../components/hero";
 import ProjectContainer from "../components/projectContainer";
 import Contact from "../components/contact";
-import { projectsData } from "../mock/data";
+import { projectsData } from "../data/data";
 
 interface IndexQueryProps {
 	allFile: {

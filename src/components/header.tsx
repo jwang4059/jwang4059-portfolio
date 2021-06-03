@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { motion } from "framer-motion";
 import { MenuToggle } from "./menuToggle";
 import MobileMenu from "./mobileMenu";
-import { resume } from "../mock/data";
+import { resume } from "../data/data";
 
 const NavLink: React.FC = ({ children }) => {
 	return (

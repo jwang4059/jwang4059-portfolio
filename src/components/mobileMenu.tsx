@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { resume } from "../mock/data";
+import { resume } from "../data/data";
 
 const MenuVariants = {
 	closed: {

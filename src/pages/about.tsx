@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { resume } from "../mock/data";
+import { resume } from "../data/data";
 
 const AboutPage = () => {
 	return (
