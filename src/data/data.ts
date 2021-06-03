@@ -1,6 +1,76 @@
 export const projectsData = [
 	{
 		image: {
+			src: "ucicirclek.png",
+			alt: "UCI Circle K Image",
+		},
+		name: "ucicirclek.xyz",
+		description: "Full Stack Web Application",
+		info: `This is my clone of the UCI Circle K website. I am currently working on refactoring the original LAMP stack website with modern web development technologies. My goal is to improve overall SEO, performance, and responsiveness of the original website.`,
+		stack: [
+			{
+				name: "React",
+				src: "devicon-react-original",
+			},
+			{
+				name: "Next.js",
+				src: "devicon-nextjs-original-wordmark",
+			},
+			{
+				name: "nodeJS",
+				src: "devicon-nodejs-plain",
+			},
+			{
+				name: "Express",
+				src: "devicon-express-original",
+			},
+			{
+				name: "PostgreSQL",
+				src: "devicon-postgresql-plain",
+			},
+			{
+				name: "redis",
+				src: "devicon-redis-plain",
+			},
+			{
+				name: "TypeScript",
+				src: "devicon-typescript-plain",
+			},
+			{
+				name: "DigitalOcean",
+				src: "devicon-digitalocean-plain",
+			},
+		],
+		repo: "https://github.com/jwang4059/ucicki-web",
+		url: "https://www.ucicirclek.xyz/",
+	},
+	{
+		image: {
+			src: "portfolio.png",
+			alt: "My Portfolio Image",
+		},
+		name: "johnwang.netlify.app",
+		description: "Portfolio",
+		info: `This is my portfolio website. It is clean, simple, and built with modern web development technology such as TypeScript, React, GatsbyJS, Tailwind CSS, and Framer Motion.`,
+		stack: [
+			{
+				name: "React",
+				src: "devicon-react-original",
+			},
+			{
+				name: "GatsbyJS",
+				src: "devicon-gatsby-plain",
+			},
+			{
+				name: "TypeScript",
+				src: "devicon-typescript-plain",
+			},
+		],
+		repo: "https://github.com/jwang4059/jwang4059-portfolio",
+		url: "https://johnwang.netlify.app/",
+	},
+	{
+		image: {
 			src: "fabflix.png",
 			alt: "Fabflix Image",
 		},
@@ -27,6 +97,10 @@ export const projectsData = [
 			{
 				name: "PostgreSQL",
 				src: "devicon-postgresql-plain",
+			},
+			{
+				name: "HEROKU",
+				src: "devicon-heroku-original",
 			},
 		],
 		repo: "https://github.com/jwang4059/fabflix",
@@ -60,6 +134,10 @@ export const projectsData = [
 			{
 				name: "mongoDB",
 				src: "devicon-mongodb-plain",
+			},
+			{
+				name: "HEROKU",
+				src: "devicon-heroku-original",
 			},
 		],
 		repo: "https://github.com/jwang4059/tangoland",
