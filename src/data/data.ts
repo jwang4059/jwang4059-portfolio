@@ -104,7 +104,7 @@ export const projectsData = [
 			},
 		],
 		repo: "https://github.com/jwang4059/fabflix",
-		url: "https://fabflix.herokuapp.com",
+		url: "https://fabflixmovies.vercel.app/",
 	},
 	{
 		image: {
@@ -141,7 +141,7 @@ export const projectsData = [
 			},
 		],
 		repo: "https://github.com/jwang4059/tangoland",
-		url: "https://tangoland.herokuapp.com",
+		url: "https://tangoland.vercel.app/",
 	},
 	{
 		image: {
