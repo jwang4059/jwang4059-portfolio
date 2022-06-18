@@ -42,7 +42,7 @@ export const projectsData = [
 			},
 		],
 		repo: "https://github.com/jwang4059/ucicki-web",
-		url: "https://www.ucicirclek.xyz/",
+		url: "https://www.ucicirclek.vercel.app/",
 	},
 	{
 		image: {
