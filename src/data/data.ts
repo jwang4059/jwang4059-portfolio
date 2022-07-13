@@ -167,4 +167,4 @@ export const projectsData = [
 ];
 
 export const resume =
-	"https://drive.google.com/file/d/18ttGd9bjwrRx-uaKrycllTBKQKdFeeEl/view?usp=sharing";
+	"https://drive.google.com/file/d/16NnpfZ7YeX5WKork8Na5vuBpjn1xHs2G/view?usp=sharing";
